@@ -135,7 +135,6 @@ const getBookedUser = (req, res) => {
     try{
 
         const bookedUsers = users.filter(user => user.status.toLowerCase() === "booked");
-        console.log(bookedUsers);
         res.status(200).send({
             message: "Data Fetch Successful",
             data: bookedUsers,
