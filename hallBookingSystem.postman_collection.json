@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "9c91991a-d1d6-4a09-85ac-b9fb029ebe8b",
+		"name": "hallBookingSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24751227"
+	},
+	"item": [
+		{
+			"name": "customers(or)users",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getBookedUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/users/getBookedUser",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"getBookedUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Raj\",\r\n    \"email\":\"raj1@gmail\",\r\n    \"mobile\":\"9876543210\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/users/createUser",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/users/editUser/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"editUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/users/deleteUser/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"deleteUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rooms",
+			"item": [
+				{
+					"name": "getAllRooms",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getRoomById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/rooms/getRoomById/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"rooms",
+								"getRoomById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createRoom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Raj\",\r\n    \"email\":\"raj1@gmail\",\r\n    \"mobile\":\"9876543210\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/users/createUser",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editRoom",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/users/editUser/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"editUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRoom",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/users/deleteUser/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"users",
+								"deleteUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bookRooms",
+			"item": [
+				{
+					"name": "getBookedRooms",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "createbookRoom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"roomId\": 6,\r\n        \"customerName\": \"Vicky\",\r\n        \"date\": \"04-09-2024\",\r\n        \"startTime\": \"10.00\",\r\n        \"endTime\": \"22.00\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/roomBook/createbookRoom/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"roomBook",
+								"createbookRoom",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "https://hallbooking-h49u.onrender.com\n",
+			"type": "string"
+		}
+	]
+}
